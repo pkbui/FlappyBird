@@ -54,7 +54,8 @@ namespace FlappyBird
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(524, 454);
             this.Controls.Add(this.flappyBird);
-            this.MaximumSize = new System.Drawing.Size(700, 1000);
+            this.MinimumSize = new System.Drawing.Size(600, 800);
+            this.MaximumSize = new System.Drawing.Size(600, 800);
             this.Name = "Form1";
             this.Text = "FlappyBird";
             ((System.ComponentModel.ISupportInitialize)(this.flappyBird)).EndInit();
@@ -71,8 +72,13 @@ namespace FlappyBird
 
             int pipeHeight = random.Next(this.Height/4, this.Height/2);
 
-            int pipeXCoordinate = random.Next(200, this.Width);
-            int pipeYCoordinate = this.Height - pipeHeight;
+            int pipeXCoordinate;
+            int pipeYCoordinate;
+            do
+            {
+                pipeXCoordinate = random.Next(200, this.Width);
+                pipeYCoordinate = this.Height - pipeHeight;
+            } while (false); //TODO: FIX CODE HERE
             this.pipe.Location = new System.Drawing.Point(pipeXCoordinate, pipeYCoordinate);
             this.pipe.Name = "pipe";
             this.pipe.Size = new System.Drawing.Size(54, pipeHeight);

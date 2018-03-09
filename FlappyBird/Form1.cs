@@ -27,7 +27,7 @@ namespace FlappyBird
             });
             Application.Idle += UpdateBirdPosition;
             Application.Idle += UpdatePipePosition;
-            MouseClick += HandleMouseClick;
+            KeyPress += HandleInput;
         }
 
         void UpdateBirdPosition(object sender, EventArgs e)
@@ -59,12 +59,17 @@ namespace FlappyBird
 
         void DoStuff()
         {
-            InitializePipe();
-            Thread.Sleep(2000);
+            while (true)
+            {
+                Invoke(new Action(() =>
+                {
+                    InitializePipe();
+                }));
+                Thread.Sleep(2000);
+            }
         }
-        
 
-        void HandleMouseClick(object sender, EventArgs e)
+        void HandleInput(object sender, EventArgs e)
         {
             flappyBird.Location = new Point(flappyBird.Location.X, flappyBird.Location.Y - jumpDistance);
         }
