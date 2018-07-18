@@ -1,15 +1,23 @@
 # Flappy Bird
 
-A Flappy Bird game written in C# using Microsoft Visual Studio
+An application that mimics the Flappy Bird game in mobile.
 
-The game objective is to pass through as much obtacles as possible.
+# How to play 
 
-The bird will automatically move in the horizontal direction
+The objective of this game is to control the bird traversing as far as possible. The further the bird gets, the higher score you acheive.
 
-The UP key is used to control the bird's height.
+The bird can only move in horizontal direction.
 
-The obstacle is randomly generated as the bird move horizontally
+Users need to press the 'UP' key to elevate the bird's height.
 
-The obstacle contain free space that the bird can fly through
+There will appear obstacles along the way which are pipes of different size.
 
-The game will end when the bird hit the obstacle
+Each pipe contains a free space for the bird to fly through.
+
+The game ends when the bird hits the pipe.
+
+# Frameworks:
+
+Microsoft Visual Studio IDE.
+
+C# 15.7.2 with its built-in library. 
